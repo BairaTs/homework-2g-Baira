@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Flexbox 0 — starting code</title>
+    <style>
+
+      html {
+        font-family: sans-serif;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      header {
+        background: purple;
+        height: 100px;
+      }
+
+      h1 {
+        text-align: center;
+        color: white;
+        line-height: 100px;
+        margin: 0;
+      }
+
+      article {
+        padding: 10px;
+        margin: 10px;
+        background: aqua;
+      }
+
+      /* Add your flexbox CSS below here */
+      section {
+        display: flex;
+      }
+
+      article {
+        flex: 1 200px;
+      }
+
+      article:nth-of-type(3) {
+        flex: 3 200px;
+        display: flex;
+        flex-flow: column;
+      }
+
+      article:nth-of-type(3) div:first-child {
+        flex: 1 100px;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-around;
+      }
+
+      button {
+        flex: 1 auto;
+        margin: 5px;
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+      .box {
+        direction: rtl;
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .inline {
+  display: inline-block;
+  color: white;
+}
+.red {
+  background-color: red;
+}
+.blue {
+  background-color: blue;
+}
+
+.item {
+  width: 70px;
+  height: 70px;
+  border: 1px solid red;
+}
+.relative {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+      
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Позиционирование. Примеры</h1>
+    </header>
+
+    <section>
+      <article>
+        <h2>display - основное свойство, которое вляиет на положение элемента </h2>
+        <div>
+            <div class="inline red">
+              Я инлайн блок
+            </div>
+            <div class="inline blue">
+              Я тоже
+            </div>
+          </div>
+
+        <p>display:block (по умолчанию), display:inline-block (элементы послдовательно слева на право), display:none (элемент скрыт), display:flex (преобразует элемент в flex-контейнер).</p>
+      </article>
+
+      <article>
+        <h2> position позволяет выдернуть элеиент из базового потока </h2>
+
+        <p>position:static (значение по умолчанию)</p>
+        <p>position:relative (относительное позиционирование</p>
+        <p>pocition:absolute (абсолютное позиционирование)</p>
+        <p>position fixed  (фиксированное позиционироване)</p>
+        <div>
+            <div class="item"> статичный </div>
+            <div class="item relative"> абсолютный </div>
+            <div class="item"> статичный </div>
+          </div>
+      </article>
+
+      <article>
+        <div>
+            <h2>Third article</h2>
+        </div>
+
+        <div class="box">
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>4</button>
+            <button>5</button>
+          </div>
+
+          <div>
+            <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
+          </div>
+      </article>
+    </section>
+  </body>
+</html>
