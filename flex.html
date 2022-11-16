@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>Flexbox</title>
+    <style>
+
+      html {
+        font-family: sans-serif;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      header {
+        background: rgb(109, 182, 255);
+        height: 75px;
+      }
+
+      h1 {
+        text-align: center;
+        color: rgb(255, 255, 255);
+        line-height: 80px;
+        margin: 0;
+      }
+      
+      h2 {
+        color:rgb(15, 5, 59);
+        font-style: italic;
+      }
+      article {
+        margin: 10px;
+        display: flex;
+        width: 30%;
+        text-align: center;
+       -webkit-box-shadow: 7px 8px 17px -3px rgba(103, 171, 195, 0.6) inset;
+       -moz-box-shadow: 7px 8px 17px -3px rgba(103, 171, 195, 0.6) inset;
+        box-shadow: 7px 8px 17px -3px rgba(25, 113, 145, 0.6) inset;
+        padding: 7px;
+        background-color: rgb(142, 207, 240);
+        display: inline-block;
+        position: relative;
+      
+      }
+
+      section {
+        display: flex;
+        height: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+  
+      button {
+        flex: 1 auto;
+        margin: 7px;
+        font-size: 18px;
+        line-height: 3;
+        background-color: antiquewhite;
+      }
+
+      .box {
+        direction: rtl;
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .inline {
+        display: inline-block;
+        color: white;
+      }
+      .red {
+        background-color: rgb(217, 225, 180);
+      }
+      .blue {
+        background-color: rgb(134, 134, 216);
+      }
+
+.item {
+  width: 50px;
+  height: 50px;
+  border: 2px solid rgb(99, 26, 177);
+}
+.relative {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+     @media screen and (max-width: 450px) {
+     .block {width: 100%;} 
+     } 
+  
+
+  .img {position: relative;
+  height: 240px;
+  width: 90%;
+}
+
+  .b     {width: 100%;
+       height: 30px;
+       position: relative;
+       bottom: 10px;
+       left: 0;
+       display: flex;
+       align-items: center;
+       justify-content: center;}
+
+.a      {display: inline-block;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: center;
+        transition: 0.4s ease-in-out;
+        width: 30%;
+        background-color: rgb(199, 218, 240);
+        border-radius: 30%;
+        padding: 10px;
+        color: #306da6;
+        box-shadow: inset 0 -5px 0 #300685;}
+
+.a:hover { box-shadow: inset 0 -60px 0 #408292, 2px 2px 3px rgba(4, 10, 130, 0.3);
+        color: #a5dcde;}
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Позиционирование. Примеры</h1>
+    </header>
+
+    <section>
+      <article>
+        <h2>display - основное свойство, которое вляиет на положение элемента </h2>
+        <div>
+            <div class="inline red">
+              Я инлайн блок
+            </div>
+            <div class="inline blue">
+              Я тоже
+            </div>
+          </div>
+
+        <p>display:block (по умолчанию), display:inline-block (элементы послдовательно слева на право), display:none (элемент скрыт), display:flex (преобразует элемент в flex-контейнер).</p>
+        <ul><h2>Пейзаж 1</h2></ul>
+        <div><img class="img" src="https://hobby-puzzle.ru/images/product_images/popup_images/1867_0.jpg"></div>
+      </article>
+
+      <article>
+        <h2> position позволяет выдернуть элемент из базового потока </h2>
+
+        <p>position:static (значение по умолчанию)</p>
+        <p>position:relative (относительное позиционирование)</p>
+        <p>pocition:absolute (абсолютное позиционирование)</p>
+        <p>position fixed  (фиксированное позиционироване)</p>
+        
+      <div>
+        
+            <div class="item"> статичный </div>
+            <div class="item relative"> абсолютный </div>
+            <div class="item"> статичный </div>
+            <ul>
+              <h2>Пейзаж 2</h2>
+            </ul>
+            <div><img class="img" src="https://img1.goodfon.ru/original/2698x1792/d/25/priroda-park-derevya-kusty.jpg"></div>
+          </div>
+      </article>
+
+      <article>
+        <div class="box">
+          <button>1</button>
+          <button>2</button>
+          <button>3</button>
+          <button>4</button>
+        </div>
+
+        <div class="parent">
+          Родитель
+          <div class="box block-1">Блок 1</div>
+          <div class="box block-2">Блок 2</div>
+          <div class="box block-3">Блок 3</div>
+          <div class="box block-4">Блок 4</div>
+          <div class="box block-5">Блок 5</div>
+      </div>
+
+        <div>
+          <h2>Пейзаж 3</h2>
+          <ul>
+          <div><img class="img" src="https://krot.info/uploads/posts/2021-12/1638610465_43-krot-info-p-izumitelnie-peizazhi-krasivie-foto-47.jpg"></div>
+          </ul>
+        </div>
+
+        
+      </article>
+    </section>
+
+    <header>
+      <div class="b"><a class="a" href="https://yandex.ru/images/search?text=%D0%BF%D0%B5%D0%B9%D0%B7%D0%B0%D0%B6%D0%B8&from=tabbar">Красивые картинки здесь</a></div>
+    </header>
+    
+  </body>
+</html>
