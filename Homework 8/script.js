@@ -26,9 +26,11 @@ let food = [gabajou, soup, buuza];
 
 food.splice(2,1); //delete buuza
 
-let.removed = food.splice(2,1); //return buuza
-
 alert(JSON.stringify(food));
+
+let.removed = food.splice(2,1); 
+
+alert(removed);//"buuza" массив из удаленного элемента
 
 buuza.ingredients.splice(2, 1); //delete mutton
 
@@ -40,9 +42,9 @@ alert(JSON.stringify(food));
 let myPriсe = `All price = ${gabajou.price + buuza.price + soup.priсe}`;
 alert(myPriсe);
 
-let profitGabajou = (gabajou.price - gabajou.costPrise);
-let profitBuuza = (buuza.price - buuza.costPrise);
-let profitSoup = (soup.price - soup.costPrise);
+let profitGabajou = gabajou.price-gabajou.costPrise;
+let profitBuuza = buuza.price-buuza.costPrise;
+let profitSoup = soup.price-soup.costPrise;
 
 food.splice(0, 2); //delete all except buuza
 alert(JSON.stringify(food)) 
