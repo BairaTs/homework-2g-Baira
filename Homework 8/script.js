@@ -45,4 +45,3 @@ let profitBuuza = (buuza.price - buuza.costPrise);
 let profitSoup = (soup.price - soup.costPrise);
 
 food.splice(0, 2); //delete all except buuza
-alert(JSON.stringify(food)) 
