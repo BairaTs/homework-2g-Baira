@@ -42,20 +42,41 @@ let menuList = [
 
 let wholeCost = 0;
 for (let i = 0; i < menuList.length; i++) {
-    let cost = 0;
     const ingredients = menuList[i].ingredients;
 
-    for (let j = 0; j < ingredients.length; j++) {
-        let ingredientName = ingredients[j];
-        let ingredientCost = ingredientsCost[ingredientName];
-        cost += ingredientCost;
-    }
-
-    menuList[i].cost = cost;
+    menuList[i].profit = calcProfit(
+        ingredients,
+        ingredientsCost,
+        menuList[i].price
+    );
     alert(JSON.stringify(menuList[i]));
 }
 
+function calcProfit(ingredients, costs, price) {
+    let cost = 0;
+    for (let j = 0; j < ingredients.length; j++) {
+            let ingredientName = ingredients[j];
+            let ingredientCost = costs[ingredientName];
+            cost += ingredientCost;
+    }
+    return price - cost;
+}
 
+
+
+
+            let firstNumber = +prompt("1");
+let secondNumber = +prompt("2");
+alert(
+    `наименьшее число - ${minFromTwoNumbers(
+        firstNumber,
+        secondNumber
+    )}`
+);
+
+function minFromTwoNumbers(a, b) {
+    return a < b ? a : b;
+}
 
 
 
