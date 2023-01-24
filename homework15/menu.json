@@ -1,0 +1,22 @@
+[
+    {
+        "name": "gabajou",
+        "price": 500,
+        "ingredients": ["meat", "carrot", "ginger", "cornstarch", "soySauce", "sugar", "vinegar"]
+       
+},
+    
+    {
+        "name": "buuza",
+        "price": 65,
+        "ingredients": ["dough", "meat", "onion"]
+},
+
+    {
+        "name": "soup",
+        "price": 95,
+        "ingredients": ["meat", "noodles", "potato", "salt"]
+    }
+]        
+
+
